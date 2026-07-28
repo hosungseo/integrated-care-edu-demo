@@ -12,6 +12,13 @@
 - Live: https://hosungseo.github.io/integrated-care-edu-demo/
 - Repo: https://github.com/hosungseo/integrated-care-edu-demo
 
+## Korea100 links (edu)
+
+- Central/local service cards may show **related institution models** from [Korea100](https://hosungseo.github.io/korea100/).
+- Mapping is a **small curated table** (`docs/korea100-map.json`), not full WLF coverage.
+- Unmapped local programs intentionally point staff to ordinance/department checks.
+- Purpose: help caseworkers write plan drafts faster with “what service” + “how the regime works”.
+
 ## What this shows
 
 1. 가상 사례 입력 카드

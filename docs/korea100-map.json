@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "baseUrl": "https://hosungseo.github.io/korea100/model/",
+    "catalogHome": "https://hosungseo.github.io/korea100/",
+    "asOf": "2026-07-29",
+    "principle": "교육용 핵심 제도 소량 정밀 링크. 전 복지서비스(WLF) 자동 커버리지가 아님.",
+    "unmappedHint": "Korea100 카드 없음 → 시군구 조례·담당과·사업 공고로 확인"
+  },
+  "institutions": {
+    "community-integrated-care": {
+      "title": "지역 돌봄 통합지원",
+      "bottleneck": "신청·조사·종합판정·개인별계획 연결",
+      "why": "통합돌봄 교육의 축 제도"
+    },
+    "long-term-care": {
+      "title": "노인장기요양보험",
+      "bottleneck": "등급 인정 전제 · 급여 종류 선택",
+      "why": "재가급여·시설급여의 사회보험 축"
+    },
+    "long-term-care-grade-renewal": {
+      "title": "노인장기요양 인정·등급변경·갱신",
+      "bottleneck": "인정신청 → 방문조사 → 등급판정",
+      "why": "등급전제 서비스 분기 연습"
+    },
+    "ltc-institution-designation": {
+      "title": "장기요양기관 지정·평가",
+      "bottleneck": "지정 기관 탐색·품질 확인",
+      "why": "제공기관 힌트와 연결"
+    },
+    "basic-livelihood-security": {
+      "title": "국민기초생활보장",
+      "bottleneck": "급여별 선정기준·소득인정액",
+      "why": "생계·주거 등 공공부조 전제"
+    },
+    "medical-aid": {
+      "title": "의료급여",
+      "bottleneck": "수급 자격·진료비 본인부담",
+      "why": "의료비·틀니 등 의료 전제"
+    },
+    "basic-pension": {
+      "title": "기초연금",
+      "bottleneck": "65세+ 소득·재산 하위 70%",
+      "why": "노후소득 보충"
+    },
+    "disability-activity-support": {
+      "title": "장애인활동지원",
+      "bottleneck": "종합조사 점수 → 월 급여량",
+      "why": "중장년 장애인 자립 축"
+    },
+    "disability-activity-support-plan": {
+      "title": "장애인활동지원 수급자격·서비스계획",
+      "bottleneck": "신청·조사·계획·갱신 경로",
+      "why": "활동지원 절차 상세"
+    },
+    "disability-registration-service-assessment": {
+      "title": "장애인 등록·서비스 종합조사",
+      "bottleneck": "장애정도 심사·종합조사",
+      "why": "장애인 제도 입구"
+    },
+    "emergency-welfare-support": {
+      "title": "긴급복지지원",
+      "bottleneck": "위기 확인 → 선지원 후 사후심사",
+      "why": "위기 가구 긴급 생계·의료"
+    },
+    "emergency-welfare-crisis-support": {
+      "title": "긴급복지지원 위기발굴·지원",
+      "bottleneck": "현장조사·지원결정·사후조사",
+      "why": "긴급 지원 업무 경로"
+    },
+    "public-health-medical-service-plan": {
+      "title": "공공보건의료기관 지정·운영계획",
+      "bottleneck": "지역 공공의료·방문건강 여건",
+      "why": "보건소·방문건강 연계 힌트"
+    },
+    "catastrophic-medical-expense-support": {
+      "title": "재난적의료비 지원",
+      "bottleneck": "소득·재산·의료비 요건",
+      "why": "고액 의료비 부담 완화"
+    }
+  },
+  "byServId": {
+    "WLF00003191": ["community-integrated-care"],
+    "WLF00001093": ["community-integrated-care"],
+    "WLF00005442": ["community-integrated-care", "emergency-welfare-support"],
+    "WLF00003248": ["long-term-care", "long-term-care-grade-renewal"],
+    "WLF00000072": ["basic-livelihood-security"],
+    "WLF00007001": ["disability-activity-support", "disability-activity-support-plan"],
+    "WLF00007002": ["public-health-medical-service-plan", "disability-activity-support"],
+    "WLF00008001": ["community-integrated-care", "long-term-care"],
+    "WLF00009001": ["public-health-medical-service-plan", "community-integrated-care"]
+  },
+  "byKeyword": [
+    {
+      "match": ["재가급여", "장기요양", "방문요양", "주야간보호", "등급 인정", "등급전제", "인정조사"],
+      "slugs": ["long-term-care", "long-term-care-grade-renewal"]
+    },
+    {
+      "match": ["노인맞춤돌봄", "맞춤돌봄", "응급안전", "통합돌봄", "퇴원"],
+      "slugs": ["community-integrated-care"]
+    },
+    {
+      "match": ["활동지원", "장애인활동", "활동보조"],
+      "slugs": ["disability-activity-support", "disability-activity-support-plan"]
+    },
+    {
+      "match": ["장애 등록", "장애정도", "서비스 종합조사"],
+      "slugs": ["disability-registration-service-assessment"]
+    },
+    {
+      "match": ["긴급돌봄", "긴급복지", "위기"],
+      "slugs": ["emergency-welfare-support", "emergency-welfare-crisis-support"]
+    },
+    {
+      "match": ["기초생활", "생계급여", "기초수급", "에너지바우처", "차상위"],
+      "slugs": ["basic-livelihood-security"]
+    },
+    {
+      "match": ["의료급여", "틀니"],
+      "slugs": ["medical-aid", "basic-livelihood-security"]
+    },
+    {
+      "match": ["기초연금"],
+      "slugs": ["basic-pension"]
+    },
+    {
+      "match": ["치매"],
+      "slugs": ["community-integrated-care", "long-term-care"]
+    },
+    {
+      "match": ["방문건강", "보건소", "만성질환"],
+      "slugs": ["public-health-medical-service-plan"]
+    },
+    {
+      "match": ["재난적의료", "고액 의료"],
+      "slugs": ["catastrophic-medical-expense-support"]
+    },
+    {
+      "match": ["요양기관", "재가센터", "장기요양기관"],
+      "slugs": ["ltc-institution-designation", "long-term-care"]
+    }
+  ]
+}
