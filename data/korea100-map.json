@@ -3,8 +3,8 @@
     "baseUrl": "https://hosungseo.github.io/korea100/model/",
     "catalogHome": "https://hosungseo.github.io/korea100/",
     "asOf": "2026-07-29",
-    "principle": "서비스 후보마다 ‘그 서비스가 속한 제도’만 얇게 연결. 통합돌봄 법령 강의용이 아님. 전 WLF 커버리지 아님.",
-    "unmappedHint": "전용 제도 카드 없음 → 사업 안내·시군구 담당과·공고로 확인 (정상)"
+    "principle": "서비스 후보마다 그 서비스가 속한 제도 카드를 연결. 통합돌봄 법령 강의용이 아님. 미수록이었던 맞춤돌봄·응급안전 카드 추가 반영.",
+    "unmappedHint": "Korea100 미수록·사업 단위 → 사업안내·조례·담당과 확인 (법적 근거 없음이 아님)"
   },
   "institutions": {
     "community-integrated-care": {
@@ -76,65 +76,206 @@
       "title": "재난적의료비 지원",
       "bottleneck": "소득·재산·의료비 요건",
       "why": "고액 의료비 부담 완화"
+    },
+    "elderly-customized-care": {
+      "title": "노인맞춤돌봄서비스",
+      "bottleneck": "대상 선정·수행인력·장기요양과 역할 경계",
+      "why": "재가 노인돌봄의 핵심 사업 제도"
+    },
+    "elderly-disabled-emergency-safety": {
+      "title": "독거노인·장애인 응급안전안심서비스",
+      "bottleneck": "장비 설치·관제 오탐·응급 출동 연계",
+      "why": "안전/응급 니즈의 장비·관제 제도"
     }
   },
   "byServId": {
-    "WLF00003248": ["long-term-care", "long-term-care-grade-renewal"],
-    "WLF00000072": ["basic-livelihood-security"],
-    "WLF00005442": ["emergency-welfare-support", "emergency-welfare-crisis-support"],
-    "WLF00007001": ["disability-activity-support", "disability-activity-support-plan"],
-    "WLF00007002": ["disability-activity-support", "public-health-medical-service-plan"],
-    "WLF00008001": ["long-term-care"],
-    "WLF00009001": ["public-health-medical-service-plan"]
+    "WLF00003248": [
+      "long-term-care",
+      "long-term-care-grade-renewal"
+    ],
+    "WLF00000072": [
+      "basic-livelihood-security"
+    ],
+    "WLF00005442": [
+      "emergency-welfare-support",
+      "emergency-welfare-crisis-support"
+    ],
+    "WLF00007001": [
+      "disability-activity-support",
+      "disability-activity-support-plan"
+    ],
+    "WLF00007002": [
+      "disability-activity-support",
+      "public-health-medical-service-plan"
+    ],
+    "WLF00008001": [
+      "long-term-care"
+    ],
+    "WLF00009001": [
+      "public-health-medical-service-plan"
+    ],
+    "WLF00003191": [
+      "elderly-customized-care"
+    ],
+    "WLF00001093": [
+      "elderly-disabled-emergency-safety"
+    ]
   },
   "byKeyword": [
     {
-      "match": ["재가급여", "장기요양", "방문요양", "주야간보호", "등급 인정", "등급전제", "장기요양 인정"],
-      "slugs": ["long-term-care", "long-term-care-grade-renewal"]
+      "match": [
+        "노인맞춤돌봄",
+        "맞춤돌봄"
+      ],
+      "slugs": [
+        "elderly-customized-care"
+      ]
     },
     {
-      "match": ["활동지원", "장애인활동", "활동보조"],
-      "slugs": ["disability-activity-support", "disability-activity-support-plan"]
+      "match": [
+        "응급안전",
+        "응급호출",
+        "안심서비스"
+      ],
+      "slugs": [
+        "elderly-disabled-emergency-safety"
+      ]
     },
     {
-      "match": ["장애 등록", "장애정도", "서비스 종합조사"],
-      "slugs": ["disability-registration-service-assessment"]
+      "match": [
+        "재가급여",
+        "장기요양",
+        "방문요양",
+        "주야간보호",
+        "등급 인정",
+        "등급전제",
+        "장기요양 인정"
+      ],
+      "slugs": [
+        "long-term-care",
+        "long-term-care-grade-renewal"
+      ]
     },
     {
-      "match": ["긴급돌봄", "긴급복지"],
-      "slugs": ["emergency-welfare-support", "emergency-welfare-crisis-support"]
+      "match": [
+        "활동지원",
+        "장애인활동",
+        "활동보조"
+      ],
+      "slugs": [
+        "disability-activity-support",
+        "disability-activity-support-plan"
+      ]
     },
     {
-      "match": ["기초생활", "생계급여", "기초수급", "에너지바우처", "차상위"],
-      "slugs": ["basic-livelihood-security"]
+      "match": [
+        "장애 등록",
+        "장애정도",
+        "서비스 종합조사"
+      ],
+      "slugs": [
+        "disability-registration-service-assessment"
+      ]
     },
     {
-      "match": ["의료급여", "틀니"],
-      "slugs": ["medical-aid", "basic-livelihood-security"]
+      "match": [
+        "긴급돌봄",
+        "긴급복지"
+      ],
+      "slugs": [
+        "emergency-welfare-support",
+        "emergency-welfare-crisis-support"
+      ]
     },
     {
-      "match": ["기초연금"],
-      "slugs": ["basic-pension"]
+      "match": [
+        "기초생활",
+        "생계급여",
+        "기초수급",
+        "에너지바우처",
+        "차상위"
+      ],
+      "slugs": [
+        "basic-livelihood-security"
+      ]
     },
     {
-      "match": ["치매", "인지저하", "치매안심"],
-      "slugs": ["long-term-care", "long-term-care-grade-renewal"]
+      "match": [
+        "의료급여",
+        "틀니"
+      ],
+      "slugs": [
+        "medical-aid",
+        "basic-livelihood-security"
+      ]
     },
     {
-      "match": ["방문건강", "보건소"],
-      "slugs": ["public-health-medical-service-plan"]
+      "match": [
+        "기초연금"
+      ],
+      "slugs": [
+        "basic-pension"
+      ]
     },
     {
-      "match": ["재난적의료", "고액 의료"],
-      "slugs": ["catastrophic-medical-expense-support"]
+      "match": [
+        "치매",
+        "인지저하",
+        "치매안심"
+      ],
+      "slugs": [
+        "long-term-care",
+        "long-term-care-grade-renewal"
+      ]
     },
     {
-      "match": ["요양기관", "재가센터", "장기요양기관"],
-      "slugs": ["ltc-institution-designation", "long-term-care"]
+      "match": [
+        "방문건강",
+        "보건소"
+      ],
+      "slugs": [
+        "public-health-medical-service-plan"
+      ]
     },
     {
-      "match": ["퇴원환자", "퇴원 연계", "재가복귀"],
-      "slugs": ["community-integrated-care"]
+      "match": [
+        "재난적의료",
+        "고액 의료"
+      ],
+      "slugs": [
+        "catastrophic-medical-expense-support"
+      ]
+    },
+    {
+      "match": [
+        "요양기관",
+        "재가센터",
+        "장기요양기관"
+      ],
+      "slugs": [
+        "ltc-institution-designation",
+        "long-term-care"
+      ]
+    },
+    {
+      "match": [
+        "퇴원환자",
+        "퇴원 연계",
+        "재가복귀"
+      ],
+      "slugs": [
+        "community-integrated-care"
+      ]
+    },
+    {
+      "match": [
+        "퇴원환자",
+        "퇴원 연계",
+        "재가복귀"
+      ],
+      "slugs": [
+        "community-integrated-care"
+      ]
     }
   ]
 }

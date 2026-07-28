@@ -57,7 +57,7 @@ function renderK100Block(item, opts = {}) {
     if (opts.allowEmpty === false) return "";
     const hint =
       (state.k100 && state.k100.meta && state.k100.meta.unmappedHint) ||
-      "Korea100 카드 없음 → 시군구 조례·담당과 확인";
+      "Korea100 미수록·사업 단위 → 사업안내·조례·담당과 확인 (법적 근거 없음 아님)";
     return `<div class="k100"><div class="k100-label">관련 제도 (Korea100)</div><p class="k100-empty">${hint}</p></div>`;
   }
   const links = slugs
