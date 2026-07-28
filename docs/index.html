@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>통합돌봄 교육용 지원계획 초안 데모</title>
+  <meta name="description" content="공공데이터 기반 통합돌봄 교육용 개인별 지원계획 초안 데모" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="top">
+    <div class="brand">
+      <div class="mark">IC</div>
+      <div>
+        <div class="brand-title">Integrated Care Edu Demo</div>
+        <div class="brand-sub">교육용 · 공공데이터 근거 · 자동확정 아님</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span class="pill" id="asOf">as of</span>
+      <a class="btn ghost" href="https://github.com/hosungseo/integrated-care-edu-demo" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero card">
+      <div class="hero-copy">
+        <p class="eyebrow">KOHI advisory prototype</p>
+        <h1 id="title">통합돌봄 교육용 지원계획 초안 데모</h1>
+        <p class="lede" id="subtitle">가상 사례 입력 → 욕구 요약 → 국가/지역 서비스 후보 → 고정 템플릿 초안</p>
+        <div class="stats" id="stats"></div>
+        <div class="hero-note" id="disclaimer"></div>
+      </div>
+      <div class="hero-side">
+        <div class="flow">
+          <div class="step"><span>1</span>사례 입력</div>
+          <div class="step"><span>2</span>욕구 태깅</div>
+          <div class="step"><span>3</span>서비스ID 근거 추천</div>
+          <div class="step"><span>4</span>템플릿 초안</div>
+          <div class="step"><span>5</span>담당자 검토</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <section class="card">
+        <div class="sec-head">
+          <h2>1. 교육용 가상 사례</h2>
+          <select id="caseSelect"></select>
+        </div>
+        <div id="caseCard" class="case-card"></div>
+        <button id="runBtn" class="btn primary full">지원계획 초안 생성</button>
+      </section>
+
+      <section class="card">
+        <div class="sec-head">
+          <h2>2. 욕구 요약</h2>
+          <span class="tag">AI draft</span>
+        </div>
+        <div id="needTags" class="tags"></div>
+        <p id="needSummary" class="body-text muted">왼쪽에서 사례를 선택하고 생성 버튼을 눌러 주세요.</p>
+      </section>
+    </section>
+
+    <section class="grid-2">
+      <section class="card">
+        <div class="sec-head">
+          <h2>3. 국가서비스 후보</h2>
+          <span class="tag blue">central</span>
+        </div>
+        <div id="nationalList" class="stack"></div>
+      </section>
+      <section class="card">
+        <div class="sec-head">
+          <h2>4. 지역특화 후보</h2>
+          <span class="tag green">local</span>
+        </div>
+        <div id="localList" class="stack"></div>
+      </section>
+    </section>
+
+    <section class="grid-2">
+      <section class="card">
+        <div class="sec-head">
+          <h2>5. 제공기관 힌트</h2>
+          <span class="tag">search sample</span>
+        </div>
+        <p id="providerNote" class="body-text muted"></p>
+        <ul id="providerList" class="plain-list"></ul>
+        <p id="facilityNote" class="body-text small muted"></p>
+      </section>
+      <section class="card">
+        <div class="sec-head">
+          <h2>6. 개인별 지원계획 초안</h2>
+          <span class="tag orange">fixed template</span>
+        </div>
+        <div id="planBox" class="plan"></div>
+      </section>
+    </section>
+
+    <section class="card sources">
+      <h2>데이터·안전 경계</h2>
+      <ul id="sources" class="plain-list"></ul>
+      <p class="body-text small muted">이 페이지는 정적 샘플 데이터를 사용합니다. API 인증키는 저장소에 포함하지 않습니다. 서비스 요건·최신성은 공식 안내와 관할 기관 확인이 필요합니다.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div>Educational prototype for integrated care planning support</div>
+    <div>No auto-decision · Human review required</div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
