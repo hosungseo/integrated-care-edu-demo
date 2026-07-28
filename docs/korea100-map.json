@@ -3,14 +3,14 @@
     "baseUrl": "https://hosungseo.github.io/korea100/model/",
     "catalogHome": "https://hosungseo.github.io/korea100/",
     "asOf": "2026-07-29",
-    "principle": "교육용 핵심 제도 소량 정밀 링크. 전 복지서비스(WLF) 자동 커버리지가 아님.",
-    "unmappedHint": "Korea100 카드 없음 → 시군구 조례·담당과·사업 공고로 확인"
+    "principle": "서비스 후보마다 ‘그 서비스가 속한 제도’만 얇게 연결. 통합돌봄 법령 강의용이 아님. 전 WLF 커버리지 아님.",
+    "unmappedHint": "전용 제도 카드 없음 → 사업 안내·시군구 담당과·공고로 확인 (정상)"
   },
   "institutions": {
     "community-integrated-care": {
       "title": "지역 돌봄 통합지원",
       "bottleneck": "신청·조사·종합판정·개인별계획 연결",
-      "why": "통합돌봄 교육의 축 제도"
+      "why": "퇴원연계·통합창구 등 해당할 때만"
     },
     "long-term-care": {
       "title": "노인장기요양보험",
@@ -79,24 +79,18 @@
     }
   },
   "byServId": {
-    "WLF00003191": ["community-integrated-care"],
-    "WLF00001093": ["community-integrated-care"],
-    "WLF00005442": ["community-integrated-care", "emergency-welfare-support"],
     "WLF00003248": ["long-term-care", "long-term-care-grade-renewal"],
     "WLF00000072": ["basic-livelihood-security"],
+    "WLF00005442": ["emergency-welfare-support", "emergency-welfare-crisis-support"],
     "WLF00007001": ["disability-activity-support", "disability-activity-support-plan"],
-    "WLF00007002": ["public-health-medical-service-plan", "disability-activity-support"],
-    "WLF00008001": ["community-integrated-care", "long-term-care"],
-    "WLF00009001": ["public-health-medical-service-plan", "community-integrated-care"]
+    "WLF00007002": ["disability-activity-support", "public-health-medical-service-plan"],
+    "WLF00008001": ["long-term-care"],
+    "WLF00009001": ["public-health-medical-service-plan"]
   },
   "byKeyword": [
     {
       "match": ["재가급여", "장기요양", "방문요양", "주야간보호", "등급 인정", "등급전제", "인정조사"],
       "slugs": ["long-term-care", "long-term-care-grade-renewal"]
-    },
-    {
-      "match": ["노인맞춤돌봄", "맞춤돌봄", "응급안전", "통합돌봄", "퇴원"],
-      "slugs": ["community-integrated-care"]
     },
     {
       "match": ["활동지원", "장애인활동", "활동보조"],
@@ -107,7 +101,7 @@
       "slugs": ["disability-registration-service-assessment"]
     },
     {
-      "match": ["긴급돌봄", "긴급복지", "위기"],
+      "match": ["긴급돌봄", "긴급복지"],
       "slugs": ["emergency-welfare-support", "emergency-welfare-crisis-support"]
     },
     {
@@ -123,11 +117,11 @@
       "slugs": ["basic-pension"]
     },
     {
-      "match": ["치매"],
-      "slugs": ["community-integrated-care", "long-term-care"]
+      "match": ["치매", "인지저하", "주야간"],
+      "slugs": ["long-term-care", "long-term-care-grade-renewal"]
     },
     {
-      "match": ["방문건강", "보건소", "만성질환"],
+      "match": ["방문건강", "보건소"],
       "slugs": ["public-health-medical-service-plan"]
     },
     {
@@ -137,6 +131,10 @@
     {
       "match": ["요양기관", "재가센터", "장기요양기관"],
       "slugs": ["ltc-institution-designation", "long-term-care"]
+    },
+    {
+      "match": ["퇴원환자", "퇴원 연계", "재가복귀"],
+      "slugs": ["community-integrated-care"]
     }
   ]
 }

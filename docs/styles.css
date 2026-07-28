@@ -236,6 +236,34 @@ select {
 .law-meta { margin-bottom: 10px; line-height: 1.5; }
 .law-item h3 { font-size: 14px; }
 .law-item.compact { background: rgba(31,78,121,.04); }
+.law-optional {
+  opacity: 0.96;
+  background: rgba(255,255,255,.72);
+}
+.law-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -.02em;
+}
+.law-summary::-webkit-details-marker { display: none; }
+.law-summary::before {
+  content: "▸ ";
+  color: var(--muted);
+  font-weight: 700;
+}
+details[open] > .law-summary::before { content: "▾ "; }
+.law-optional-note {
+  margin: 12px 0 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(20,32,27,.03);
+}
 .decree-box { margin-top: 14px; padding-top: 12px; border-top: 1px dashed rgba(20,32,27,.12); }
 .decree-head { font-size: 13px; font-weight: 800; color: var(--blue); margin-bottom: 10px; }
 #lawSection .sec-head { align-items: center; }

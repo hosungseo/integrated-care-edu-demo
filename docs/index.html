@@ -36,11 +36,10 @@
         <div class="flow">
           <div class="step"><span>1</span>사례 입력</div>
           <div class="step"><span>2</span>지원 영역 정리</div>
-          <div class="step"><span>3</span>법령 근거</div>
-          <div class="step"><span>4</span>서비스ID 근거 추천</div>
-          <div class="step"><span>5</span>관련 제도(Korea100)</div>
-          <div class="step"><span>6</span>템플릿 초안</div>
-          <div class="step"><span>7</span>담당자 검토</div>
+          <div class="step"><span>3</span>서비스 후보</div>
+          <div class="step"><span>4</span>관련 제도(서비스별)</div>
+          <div class="step"><span>5</span>계획 초안 작성</div>
+          <div class="step"><span>6</span>담당자 검토</div>
         </div>
       </div>
     </section>
@@ -65,28 +64,17 @@
       </section>
     </section>
 
-    <section class="card" id="lawSection">
-      <div class="sec-head">
-        <h2>3. 법령 근거 <span class="tag blue">법제처 API</span></h2>
-        <a id="lawLink" class="btn ghost" href="#" target="_blank" rel="noreferrer">원문</a>
-      </div>
-      <div id="lawMeta" class="law-meta body-text small muted">생성 전</div>
-      <div id="lawFocus" class="tags"></div>
-      <div id="lawList" class="stack"></div>
-      <div id="decreeBox" class="decree-box"></div>
-    </section>
-
     <section class="grid-2">
       <section class="card">
         <div class="sec-head">
-          <h2>4. 국가서비스 후보</h2>
+          <h2>3. 국가서비스 후보</h2>
           <span class="tag blue">central</span>
         </div>
         <div id="nationalList" class="stack"></div>
       </section>
       <section class="card">
         <div class="sec-head">
-          <h2>5. 지역특화 후보</h2>
+          <h2>4. 지역특화 후보</h2>
           <span class="tag green">local</span>
         </div>
         <div id="localList" class="stack"></div>
@@ -96,7 +84,7 @@
     <section class="grid-2">
       <section class="card">
         <div class="sec-head">
-          <h2>6. 제공기관 힌트</h2>
+          <h2>5. 제공기관 힌트</h2>
           <span class="tag">search sample</span>
         </div>
         <p id="providerNote" class="body-text muted"></p>
@@ -105,11 +93,28 @@
       </section>
       <section class="card">
         <div class="sec-head">
-          <h2>7. 개인별 지원계획 초안</h2>
+          <h2>6. 개인별 지원계획 초안</h2>
           <span class="tag orange">fixed template</span>
         </div>
         <div id="planBox" class="plan"></div>
       </section>
+    </section>
+
+    <section class="card law-optional" id="lawSection">
+      <details id="lawDetails">
+        <summary class="law-summary">
+          <span>선택 참고 · 통합지원 절차 법령 예시 <span class="tag">필독 아님</span></span>
+          <a id="lawLink" class="btn ghost" href="#" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">원문</a>
+        </summary>
+        <p class="body-text small muted law-optional-note">
+          이 데모의 목표는 <b>서비스 후보를 근거 있게 고르고 계획서 초안을 쓰는 연습</b>입니다.
+          아래는 통합지원 창구 절차를 볼 때만 펼치는 참고용이며, 모든 사례·서비스의 필수 학습 내용이 아닙니다.
+        </p>
+        <div id="lawMeta" class="law-meta body-text small muted">생성 전</div>
+        <div id="lawFocus" class="tags"></div>
+        <div id="lawList" class="stack"></div>
+        <div id="decreeBox" class="decree-box"></div>
+      </details>
     </section>
 
     <section class="card sources">

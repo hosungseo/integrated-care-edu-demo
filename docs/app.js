@@ -92,10 +92,7 @@ function collectCaseInstitutions(c) {
   };
   (c.national || []).forEach(addItem);
   (c.local || []).forEach(addItem);
-  // always surface integrated care for this edu demo
-  if (!seen.includes("community-integrated-care") && state.k100?.institutions?.["community-integrated-care"]) {
-    seen.unshift("community-integrated-care");
-  }
+  // Do not force community-integrated-care — only when a service maps to it.
   return seen;
 }
 
@@ -283,13 +280,14 @@ function renderPlan(c) {
       </table>
     </div>
     <div class="plan-block">
-      <h3>법령 근거(계획 수립 시)</h3>
-      <ul>${(lawBits.length ? lawBits : ["개인별지원계획·종합판정·제공 조문"]).map((x) => `<li>${x}</li>`).join("")}</ul>
+      <h3>관련 제도 (Korea100) — 후보 서비스 기준</h3>
+      <ul class="k100-plan-list">${instList || "<li class='muted'>전용 제도 카드 없음 · 사업 안내·담당과 확인 (정상)</li>"}</ul>
+      <p class="body-text small muted" style="margin-top:8px">학습 목표: 계획서에 “무엇을 넣을지”를 쓰는 연습. Korea100은 각 후보가 속한 제도의 병목·절차를 볼 때만 씁니다. 통합돌봄 법령 암기가 목표가 아닙니다.</p>
     </div>
     <div class="plan-block">
-      <h3>관련 제도 (Korea100)</h3>
-      <ul class="k100-plan-list">${instList || "<li class='muted'>매핑된 제도 없음 · 시군구 담당과 확인</li>"}</ul>
-      <p class="body-text small muted" style="margin-top:8px">서비스 추천 = 무엇을 · Korea100 = 그 제도가 어떻게 돌아가는지. 카드가 없는 지방특화는 조례·공고 확인이 정상입니다.</p>
+      <h3>절차 참고(선택)</h3>
+      <ul>${(lawBits.length ? lawBits : ["개인별지원계획·종합판정 등 — 필요 시만"]).map((x) => `<li>${x}</li>`).join("")}</ul>
+      <p class="body-text small muted" style="margin-top:6px">아래 ‘선택 참고’ 법령 접기는 통합지원 창구 절차 예시일 뿐입니다.</p>
     </div>
     <div class="plan-block">
       <h3>담당자 체크리스트</h3>
@@ -338,8 +336,8 @@ function initMeta(data) {
 async function boot() {
   setEmpty($("nationalList"), "생성 전");
   setEmpty($("localList"), "생성 전");
-  setEmpty($("lawList"), "생성 버튼을 누르면 법제처 기반 조문 근거가 표시됩니다.");
-  setEmpty($("planBox"), "생성 버튼을 누르면 고정 템플릿 초안이 채워집니다.");
+  setEmpty($("lawList"), "생성 후 펼치면 통합지원 절차 법령 예시가 표시됩니다(선택 참고).");
+  setEmpty($("planBox"), "생성 버튼을 누르면 서비스 후보 기반 계획 초안이 채워집니다.");
   $("providerNote").textContent = "생성 전";
   $("providerList").innerHTML = "";
   $("facilityNote").textContent = "";
