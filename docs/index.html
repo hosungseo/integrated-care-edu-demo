@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>통합돌봄 교육용 지원계획 초안 데모</title>
-  <meta name="description" content="공공데이터 기반 통합돌봄 교육용 개인별 지원계획 초안 데모" />
+  <meta name="description" content="법령+공공데이터 기반 통합돌봄 교육용 개인별 지원계획 초안 데모" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -14,7 +14,7 @@
       <div class="mark">IC</div>
       <div>
         <div class="brand-title">Integrated Care Edu Demo</div>
-        <div class="brand-sub">교육용 · 공공데이터 근거 · 자동확정 아님</div>
+        <div class="brand-sub">교육용 · 법령+공공데이터 근거 · 자동확정 아님</div>
       </div>
     </div>
     <div class="top-actions">
@@ -28,7 +28,7 @@
       <div class="hero-copy">
         <p class="eyebrow">KOHI advisory prototype</p>
         <h1 id="title">통합돌봄 교육용 지원계획 초안 데모</h1>
-        <p class="lede" id="subtitle">가상 사례 입력 → 지원 초점 요약 → 국가/지역 서비스 후보 → 고정 템플릿 초안</p>
+        <p class="lede" id="subtitle">가상 사례 입력 → 지원 초점 요약 → 법령 근거 → 국가/지역 서비스 후보 → 고정 템플릿 초안</p>
         <div class="stats" id="stats"></div>
         <div class="hero-note" id="disclaimer"></div>
       </div>
@@ -36,9 +36,10 @@
         <div class="flow">
           <div class="step"><span>1</span>사례 입력</div>
           <div class="step"><span>2</span>지원 영역 정리</div>
-          <div class="step"><span>3</span>서비스ID 근거 추천</div>
-          <div class="step"><span>4</span>템플릿 초안</div>
-          <div class="step"><span>5</span>담당자 검토</div>
+          <div class="step"><span>3</span>법령 근거</div>
+          <div class="step"><span>4</span>서비스ID 근거 추천</div>
+          <div class="step"><span>5</span>템플릿 초안</div>
+          <div class="step"><span>6</span>담당자 검토</div>
         </div>
       </div>
     </section>
@@ -63,17 +64,28 @@
       </section>
     </section>
 
+    <section class="card" id="lawSection">
+      <div class="sec-head">
+        <h2>3. 법령 근거 <span class="tag blue">법제처 API</span></h2>
+        <a id="lawLink" class="btn ghost" href="#" target="_blank" rel="noreferrer">원문</a>
+      </div>
+      <div id="lawMeta" class="law-meta body-text small muted">생성 전</div>
+      <div id="lawFocus" class="tags"></div>
+      <div id="lawList" class="stack"></div>
+      <div id="decreeBox" class="decree-box"></div>
+    </section>
+
     <section class="grid-2">
       <section class="card">
         <div class="sec-head">
-          <h2>3. 국가서비스 후보</h2>
+          <h2>4. 국가서비스 후보</h2>
           <span class="tag blue">central</span>
         </div>
         <div id="nationalList" class="stack"></div>
       </section>
       <section class="card">
         <div class="sec-head">
-          <h2>4. 지역특화 후보</h2>
+          <h2>5. 지역특화 후보</h2>
           <span class="tag green">local</span>
         </div>
         <div id="localList" class="stack"></div>
@@ -83,7 +95,7 @@
     <section class="grid-2">
       <section class="card">
         <div class="sec-head">
-          <h2>5. 제공기관 힌트</h2>
+          <h2>6. 제공기관 힌트</h2>
           <span class="tag">search sample</span>
         </div>
         <p id="providerNote" class="body-text muted"></p>
@@ -92,7 +104,7 @@
       </section>
       <section class="card">
         <div class="sec-head">
-          <h2>6. 개인별 지원계획 초안</h2>
+          <h2>7. 개인별 지원계획 초안</h2>
           <span class="tag orange">fixed template</span>
         </div>
         <div id="planBox" class="plan"></div>
@@ -102,7 +114,7 @@
     <section class="card sources">
       <h2>데이터·안전 경계</h2>
       <ul id="sources" class="plain-list"></ul>
-      <p class="body-text small muted">이 페이지는 정적 샘플 데이터를 사용합니다. API 인증키는 저장소에 포함하지 않습니다. 서비스 요건·최신성은 공식 안내와 관할 기관 확인이 필요합니다.</p>
+      <p class="body-text small muted">이 페이지는 정적 샘플 데이터를 사용합니다. API 인증키는 저장소에 포함하지 않습니다. 법령 발췌와 서비스 요건·최신성은 국가법령정보센터 및 관할 기관 확인이 필요합니다.</p>
     </section>
   </main>
 
