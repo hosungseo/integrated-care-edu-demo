@@ -89,7 +89,7 @@ function renderPlan(c) {
     <div class="plan-block">
       <h3>서비스 연계표</h3>
       <table class="matrix">
-        <thead><tr><th>욕구</th><th>후보</th></tr></thead>
+        <thead><tr><th>지원 영역</th><th>후보</th></tr></thead>
         <tbody>
           ${plan.matrix.map((x) => `<tr><td>${x.need}</td><td>${x.candidate}</td></tr>`).join("")}
         </tbody>
