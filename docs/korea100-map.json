@@ -89,7 +89,7 @@
   },
   "byKeyword": [
     {
-      "match": ["재가급여", "장기요양", "방문요양", "주야간보호", "등급 인정", "등급전제", "인정조사"],
+      "match": ["재가급여", "장기요양", "방문요양", "주야간보호", "등급 인정", "등급전제", "장기요양 인정"],
       "slugs": ["long-term-care", "long-term-care-grade-renewal"]
     },
     {
@@ -117,7 +117,7 @@
       "slugs": ["basic-pension"]
     },
     {
-      "match": ["치매", "인지저하", "주야간"],
+      "match": ["치매", "인지저하", "치매안심"],
       "slugs": ["long-term-care", "long-term-care-grade-renewal"]
     },
     {
