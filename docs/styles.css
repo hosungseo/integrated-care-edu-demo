@@ -158,3 +158,11 @@ select {
   .top, .foot { flex-direction: column; align-items: flex-start; }
   .kv { grid-template-columns: 78px 1fr; }
 }
+
+.law-meta { margin-bottom: 10px; line-height: 1.5; }
+.law-item h3 { font-size: 14px; }
+.law-item.compact { background: rgba(31,78,121,.04); }
+.decree-box { margin-top: 14px; padding-top: 12px; border-top: 1px dashed rgba(20,32,27,.12); }
+.decree-head { font-size: 13px; font-weight: 800; color: var(--blue); margin-bottom: 10px; }
+#lawSection .sec-head { align-items: center; }
+#lawSection .btn.ghost { padding: 8px 12px; font-size: 12px; }
