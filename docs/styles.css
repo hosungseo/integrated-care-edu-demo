@@ -205,6 +205,35 @@ select {
 }
 .k100-plan-list a:hover { text-decoration: underline; }
 .k100-plan-list .muted { color: var(--muted); font-size: 12px; }
+.local-hint {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(31, 78, 121, 0.18);
+}
+.local-hint-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--orange);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.local-hint-type {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(154, 91, 20, 0.12);
+  font-size: 10px;
+}
+.local-hint-check,
+.local-hint-dept {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.local-hint-dept { margin-top: 3px; }
 .flag {
   flex: none; padding: 5px 8px; border-radius: 999px; font-size: 11px; font-weight: 800;
   background: rgba(20,32,27,.06); color: var(--muted);

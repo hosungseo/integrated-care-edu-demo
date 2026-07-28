@@ -51,14 +51,38 @@ function resolveK100(item) {
   return slugs.slice(0, 3);
 }
 
+function localHintFor(item) {
+  const hints = (state.k100 && state.k100.localHints) || {};
+  return (item && item.servId && hints[item.servId]) || null;
+}
+
+function renderLocalHint(item) {
+  const h = localHintFor(item);
+  if (!h) return "";
+  return `
+    <div class="local-hint">
+      <div class="local-hint-label">지역·사업 확인 <span class="local-hint-type">${h.type || "확인"}</span></div>
+      <p class="local-hint-check">${h.check || ""}</p>
+      ${h.deptHint ? `<p class="local-hint-dept">창구 힌트: ${h.deptHint}</p>` : ""}
+    </div>
+  `;
+}
+
 function renderK100Block(item, opts = {}) {
   const slugs = resolveK100(item);
+  const localHtml = renderLocalHint(item);
   if (!slugs.length) {
-    if (opts.allowEmpty === false) return "";
+    if (opts.allowEmpty === false && !localHtml) return "";
     const hint =
       (state.k100 && state.k100.meta && state.k100.meta.unmappedHint) ||
-      "Korea100 미수록·사업 단위 → 사업안내·조례·담당과 확인 (법적 근거 없음 아님)";
-    return `<div class="k100"><div class="k100-label">관련 제도 (Korea100)</div><p class="k100-empty">${hint}</p></div>`;
+      "Korea100 미수록·사업 단위 → 사업안내·조례·담당과 확인 (법적 근거 없음이 아님)";
+    return `
+      <div class="k100">
+        <div class="k100-label">관련 제도 (Korea100)</div>
+        <p class="k100-empty">${hint}</p>
+        ${localHtml}
+      </div>
+    `;
   }
   const links = slugs
     .map((slug) => {
@@ -79,6 +103,7 @@ function renderK100Block(item, opts = {}) {
       <div class="k100-label">관련 제도 (Korea100)</div>
       <div class="k100-links">${links}</div>
       ${tips ? `<p class="k100-tip">${tips}</p>` : ""}
+      ${localHtml}
     </div>
   `;
 }
